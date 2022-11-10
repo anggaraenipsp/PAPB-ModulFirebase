@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue"
+    tools:context=".MainActivity"
+    android:layout_margin="10dp">
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Masukkan no handphone"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"/>
+    <EditText
+        android:id="@+id/phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="No Handphone"
+        android:inputType="phone"
+        android:layout_marginBottom="20dp"
+        android:layout_below="@id/text"/>
+
+    <Button
+        android:id="@+id/btngenerateOTP"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/phone"
+        android:layout_alignParentStart="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="86dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="20dp"
+        android:text="Kirim kode"
+        android:textSize="20dp" />
+
+    <EditText
+        android:id="@+id/otp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btngenerateOTP"
+        android:layout_marginBottom="20dp"
+        android:hint="Kode Verifikasi"
+        android:inputType="number" />
+
+    <Button
+        android:id="@+id/btnverifyOTP"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/otp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="28dp"
+        android:layout_marginBottom="20dp"
+        android:enabled="false"
+        android:text="Verifikasi Kode"
+        android:textSize="20dp" />
+
+    <ProgressBar
+        android:id="@+id/bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnverifyOTP"
+        android:layout_centerHorizontal="true"
+        android:visibility="invisible"/>
+</RelativeLayout>
